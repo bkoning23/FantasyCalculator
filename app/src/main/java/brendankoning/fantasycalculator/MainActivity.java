@@ -79,19 +79,24 @@ public class MainActivity extends ActionBarActivity {
         double killCount, assistsCount, deathCount, creepCount, pointCount;
         String totalPoints;
 
-        killCount = Double.parseDouble(kills.getText().toString());
-        assistsCount = Double.parseDouble(assists.getText().toString());
-        deathCount = Double.parseDouble(deaths.getText().toString());
-        creepCount = Double.parseDouble(creep_score.getText().toString());
 
-        pointCount = (killCount * 2) + (assistsCount * 1.5) - (deathCount*0.5) + (creepCount*0.01);
 
-        pointCount = Math.round(pointCount * 100);
-        pointCount = pointCount/100;
+        try {
+            killCount = Double.parseDouble(kills.getText().toString());
+            assistsCount = Double.parseDouble(assists.getText().toString());
+            deathCount = Double.parseDouble(deaths.getText().toString());
+            creepCount = Double.parseDouble(creep_score.getText().toString());
+            pointCount = (killCount * 2) + (assistsCount * 1.5) - (deathCount*0.5) + (creepCount*0.01);
+            pointCount = Math.round(pointCount * 100);
+            pointCount = pointCount/100;
+            totalPoints = String.valueOf(pointCount);
+            points.setText(totalPoints);
 
-        totalPoints = String.valueOf(pointCount);
+        }catch (NumberFormatException e){
+            points.setText("Invalid");
+        }
 
-        points.setText(totalPoints);
+
     }
 
 
