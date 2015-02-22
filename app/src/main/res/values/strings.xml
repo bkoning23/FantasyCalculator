@@ -3,4 +3,10 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="kills">Kills</string>
+    <string name="assists">Assists</string>
+    <string name="deaths">Deaths</string>
+    <string name="calculate_button">CALCULATE!</string>
+    <string name="points">Total Points</string>
+    <string name="creep_score">CS</string>
 </resources>

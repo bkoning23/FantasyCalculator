@@ -5,7 +5,102 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/killsInput"
+        android:layout_marginTop="62dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/kills"
+        android:id="@+id/killsLabel"
+        android:layout_alignBottom="@+id/killsInput"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deaths"
+        android:id="@+id/deathsLabel"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/killsLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/deathsInput"
+        android:layout_alignBottom="@+id/deathsLabel"
+        android:layout_alignLeft="@+id/killsInput"
+        android:layout_alignStart="@+id/killsInput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/assists"
+        android:id="@+id/assistsLabel"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/deathsLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/assistsInput"
+        android:layout_alignBottom="@+id/assistsLabel"
+        android:layout_alignLeft="@+id/deathsInput"
+        android:layout_alignStart="@+id/deathsInput" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate_button"
+        android:id="@+id/calculateButton"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/killsLabel"
+        android:layout_toEndOf="@+id/killsLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/points"
+        android:hint="@string/points"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/killsInput"
+        android:layout_alignEnd="@+id/killsInput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/creep_score"
+        android:id="@+id/csLabel"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/csInput"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/assistsInput"
+        android:layout_alignStart="@+id/assistsInput" />
 
 </RelativeLayout>
